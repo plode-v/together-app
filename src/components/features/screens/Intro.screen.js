@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Dimensions, ScrollView, Text, SafeAreaView } from "react-native";
+import { Dimensions, ScrollView, Text, StatusBar } from "react-native";
 import styled from "styled-components/native";
 
 import PageContainer from "../../PageContainer";
@@ -52,13 +52,14 @@ const IntroScreen = () => {
 
 const Container = styled.SafeAreaView`
   flex: 1;
-  background-color: ${(props) => props.theme.colors.bg.muted};
+  background-color: ${(props) => props.theme.colors.bg.primary};
+  margin-top: ${StatusBar.currentHeight}px;
 `;
 
 const PageText = styled.Text`
   font-size: 20px;
   text-align: center;
-  color: ${(props) => props.theme.colors.bg.secondary};
+  color: ${(props) => props.theme.colors.bg.black};
 `;
 
 const GetStartedButton = styled.TouchableOpacity`
@@ -77,7 +78,8 @@ const Dot = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: ${(props) => (props.active ? "blue" : "gray")};
+  background-color: ${(props) =>
+    props.active ? props.theme.colors.ui.primary : props.theme.colors.bg.black};
 `;
 
 export default IntroScreen;

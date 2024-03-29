@@ -1,13 +1,12 @@
 import { StatusBar as ExpoStatusbar } from "expo-status-bar";
-import { StatusBar } from "react-native";
 import styled, { ThemeProvider } from "styled-components/native";
 
+import HomeScreen from "./src/components/features/screens/Home.screen";
 import IntroScreen from "./src/components/features/screens/Intro.screen";
 import { theme } from "./src/components/theme/index";
 
 const Container = styled.View`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
 `;
 
 export default function App() {
@@ -15,7 +14,9 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <Container>
-          <IntroScreen />
+          {/* show intro screen if not logged in */}
+          {/* <IntroScreen /> */}
+          <HomeScreen />
         </Container>
         <ExpoStatusbar style="auto" />
       </ThemeProvider>
