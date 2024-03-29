@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Dimensions, ScrollView, Text } from "react-native";
+import { Dimensions, ScrollView, Text, SafeAreaView } from "react-native";
 import styled from "styled-components/native";
 
 import PageContainer from "../../PageContainer";
@@ -15,7 +15,7 @@ const IntroScreen = () => {
   };
 
   return (
-    <Container width={screenWidth}>
+    <Container>
       <ScrollView
         horizontal
         pagingEnabled
@@ -50,8 +50,7 @@ const IntroScreen = () => {
   );
 };
 
-const Container = styled.View`
-  width: 100%;
+const Container = styled.SafeAreaView`
   flex: 1;
   background-color: ${(props) => props.theme.colors.bg.muted};
 `;
