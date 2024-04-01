@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components/native";
 
 const GroupComponent = ({ bgColor }) => {
-  const Container = styled.SafeAreaView`
+  const Container = styled.View`
     height: 200px;
     width: 100%;
     background-color: ${bgColor};

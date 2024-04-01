@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Dimensions } from "react-native";
 import styled from "styled-components/native";
 
-const screenWidth = Dimensions.get("window").width;
 const MenuBar = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State to track active button
 
@@ -14,53 +12,33 @@ const MenuBar = () => {
 
   return (
     <Wrapper>
-      <Container>
-        {/* FIXME: Add icons inside the button later */}
-        <MenuItem
-          onPress={() => handleMenuItemPress(0)}
-          active={activeIndex === 0}
-        />
-        <MenuItem
-          onPress={() => handleMenuItemPress(1)}
-          active={activeIndex === 1}
-        />
-        <MenuItem
-          onPress={() => handleMenuItemPress(2)}
-          active={activeIndex === 2}
-        />
-        <MenuItem
-          onPress={() => handleMenuItemPress(3)}
-          active={activeIndex === 3}
-        />
-      </Container>
+      {/* FIXME: Add icons inside the button later */}
+      <MenuItem
+        onPress={() => handleMenuItemPress(0)}
+        active={activeIndex === 0}
+      />
+      <MenuItem
+        onPress={() => handleMenuItemPress(1)}
+        active={activeIndex === 1}
+      />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.View`
-  position: absolute;
-  bottom: 4%;
+  height: 80px;
   width: 100%;
-`;
-
-const Container = styled.View`
   background-color: ${(props) => props.theme.colors.bg.black};
-  width: ${screenWidth * 0.85}px;
-  align-self: center;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 20px 0;
-  border-radius: 100%;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 const MenuItem = styled.TouchableOpacity`
-  width: 55px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
+  width: 50%;
+  height: 100%;
   background-color: ${(props) =>
-    props.active ? props.theme.colors.bg.primary : props.theme.colors.bg.gray};
-  align-items: center;
-  justify-content: centers;
+    props.active ? props.theme.colors.ui.primary : props.theme.colors.bg.gray};
 `;
 
 export default MenuBar;
