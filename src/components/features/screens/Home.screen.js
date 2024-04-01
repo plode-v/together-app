@@ -14,7 +14,7 @@ const HomeScreen = () => {
         <MainSection>
           <GroupComponent bgColor="orange" />
           <GroupComponent bgColor="pink" />
-          <GroupComponent bgColor="blue" />
+          <GroupComponent bgColor="skyblue" />
         </MainSection>
       </Wrapper>
       <MenuBar />
