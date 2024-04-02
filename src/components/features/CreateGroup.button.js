@@ -3,6 +3,7 @@ import styled from "styled-components/native";
 
 const CreateGroup = () => {
   return (
+    // FIXME: Fix + icon not centered
     <ButtonContainer>
       <ButtonText>+</ButtonText>
     </ButtonContainer>
