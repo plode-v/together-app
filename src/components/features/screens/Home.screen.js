@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components/native";
 
 import HeaderComponent from "./Header.component";
+import CreateGroup from "../CreateGroup.button";
 import GroupComponent from "../Group.component";
 import MenuBar from "../MenuBar.component";
 
@@ -15,6 +16,7 @@ const HomeScreen = () => {
           <GroupComponent bgColor="orange" />
           <GroupComponent bgColor="pink" />
           <GroupComponent bgColor="skyblue" />
+          <CreateGroup />
         </MainSection>
       </Wrapper>
       <MenuBar />
