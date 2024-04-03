@@ -2,12 +2,16 @@ import React from "react";
 import styled from "styled-components/native";
 
 const CreateGroup = () => {
+  const handleButton = () => {
+    // navigate to create new group screen & slide animation from bottom
+  };
+
   return (
     // FIXME: Fix + icon not centered
-    <ButtonContainer>
+    <ButtonContainer onPress={handleButton}>
       <ButtonText>+</ButtonText>
     </ButtonContainer>
-  )
+  );
 };
 
 const ButtonContainer = styled.TouchableOpacity`
