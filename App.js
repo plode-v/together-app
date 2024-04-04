@@ -4,7 +4,6 @@ import HomeScreen from "./src/components/features/screens/Home.screen";
 // import IntroScreen from "./src/components/features/screens/Intro.screen";
 import { theme } from "./src/components/theme/index";
 
-
 const Container = styled.View`
   flex: 1;
 `;

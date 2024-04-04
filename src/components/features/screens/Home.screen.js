@@ -9,7 +9,6 @@ import GroupComponent from "../Group.component";
 import MenuBar from "../MenuBar.component";
 
 const HomeScreen = () => {
-
   const handlePress = () => {
     Alert.alert("button pressed");
   };
@@ -22,7 +21,7 @@ const HomeScreen = () => {
           <GroupComponent bgColor="orange" />
           <GroupComponent bgColor="pink" />
           <GroupComponent bgColor="skyblue" />
-          <CreateGroup handleButton={handlePress} />
+          <CreateGroup handleButton7={handlePress} />
         </MainSection>
       </Wrapper>
       <MenuBar />
