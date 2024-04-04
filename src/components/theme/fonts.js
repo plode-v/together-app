@@ -1,4 +1,4 @@
-export const fonts = {
+export const fontsFamily = {
   body: "Lato_400Regular",
   heading: "Lato_700Bold",
   monospace: "Oswald_400Regular",

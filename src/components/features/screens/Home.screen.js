@@ -1,5 +1,6 @@
 import { StatusBar as ExpoStatusbar } from "expo-status-bar";
 import React from "react";
+import { Alert } from "react-native";
 import styled from "styled-components/native";
 
 import HeaderComponent from "./Header.component";
@@ -8,6 +9,11 @@ import GroupComponent from "../Group.component";
 import MenuBar from "../MenuBar.component";
 
 const HomeScreen = () => {
+
+  const handlePress = () => {
+    Alert.alert("button pressed");
+  };
+
   return (
     <Container>
       <HeaderComponent />
@@ -16,7 +22,7 @@ const HomeScreen = () => {
           <GroupComponent bgColor="orange" />
           <GroupComponent bgColor="pink" />
           <GroupComponent bgColor="skyblue" />
-          <CreateGroup />
+          <CreateGroup handleButton={handlePress} />
         </MainSection>
       </Wrapper>
       <MenuBar />
