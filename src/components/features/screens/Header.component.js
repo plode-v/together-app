@@ -18,7 +18,7 @@ const Wrapper = styled.View`
   height: 150px;
   width: 100%;
   background-color: ${(props) => props.theme.colors.ui.primary};
-  border-radius: 0 0 25% 25%;
+  border-radius: 0 0 25px 25px;
 `;
 
 const NameContainer = styled.View`

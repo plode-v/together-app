@@ -1,3 +1,12 @@
+import {
+  useFonts as useLato,
+  Lato_400Regular,
+  Lato_700Bold,
+} from "@expo-google-fonts/lato";
+import {
+  useFonts as useOswald,
+  Oswald_400Regular,
+} from "@expo-google-fonts/oswald";
 import styled, { ThemeProvider } from "styled-components/native";
 
 import HomeScreen from "./src/components/features/screens/Home.screen";
@@ -9,6 +18,20 @@ const Container = styled.View`
 `;
 
 export default function App() {
+
+  const [oswaldLoad] = useOswald({
+    Oswald_400Regular,
+  });
+
+  const [latoLoaded] = useLato({
+    Lato_400Regular,
+    Lato_700Bold,
+  });
+
+  if (!oswaldLoad || !latoLoaded) {
+    return null;
+  }
+
   return (
     <>
       <ThemeProvider theme={theme}>
