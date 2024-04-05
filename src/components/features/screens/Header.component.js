@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components/native";
 
+import ProfileComponent from "../../buttons/Profile.button";
+
 const HeaderComponent = () => {
   return (
     <Wrapper>
@@ -9,6 +11,7 @@ const HeaderComponent = () => {
           {/* FIXME: Add first name */}
           John Doe
         </NameText>
+        <ProfileComponent />
       </NameContainer>
     </Wrapper>
   );
@@ -23,10 +26,15 @@ const Wrapper = styled.View`
 
 const NameContainer = styled.View`
   height: max-content;
-  width: 50%;
+  width: 100%;
   position: absolute;
   bottom: 15%;
-  margin-left: 5%;
+  /* FIXME: Update for tablet screens */
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const NameText = styled.Text`

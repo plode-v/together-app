@@ -4,7 +4,7 @@ import { Alert } from "react-native";
 import styled from "styled-components/native";
 
 import HeaderComponent from "./Header.component";
-import CreateGroup from "../CreateGroup.button";
+import CreateGroup from "../../buttons/CreateGroup.button";
 import GroupComponent from "../Group.component";
 import MenuBar from "../MenuBar.component";
 
