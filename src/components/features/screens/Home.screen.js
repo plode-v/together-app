@@ -21,7 +21,7 @@ const HomeScreen = () => {
           <GroupComponent bgColor="orange" />
           <GroupComponent bgColor="pink" />
           <GroupComponent bgColor="skyblue" />
-          <CreateGroup handleButton7={handlePress} />
+          <CreateGroup handleButton={handlePress} />
         </MainSection>
       </Wrapper>
       <MenuBar />
